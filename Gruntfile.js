@@ -6,10 +6,16 @@ module.exports = function(grunt) {
       test: {
         options: {
           port: 8080,
-          //assumes OS X
-          appName: 'open',
-          open: 'http://localhost:8080/node_modules/intern/client.html?config=test/intern_config.js',
-          keepalive: true
+          open: {
+            //assumes OS X
+            appName: 'open',
+            target: 'http://localhost:8080/node_modules/intern/client.html?config=test/intern_config.js',
+            callback: function() {
+              grunt.log.write('visit http://localhost:8080/node_modules/intern/client.html?config=test/intern_config.js');
+            }
+          },
+          keepalive: true,
+          livereload: true,
         }
       }
     }
