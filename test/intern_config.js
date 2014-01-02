@@ -53,8 +53,8 @@ define({
 		// Packages that should be registered with the loader in each testing environment
 		packages: [
       { name: 'app', location: 'app' },
-      { name: 'dojo', location: 'bower_components/dojo'},
-      { name: 'dijit', location: 'bower_components/dijit'}
+      { name: 'dojo', location: 'libs/dojo'},
+      { name: 'dijit', location: 'libs/dijit'}
     ]
 	},
 
