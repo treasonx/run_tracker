@@ -89,6 +89,13 @@ define([
         });
       }
 
+      b.it('should render unknown color as other', function() {
+        data.type = 'blahpoothingers';
+        activity = new Activity(data, ele);
+        activity.startup();
+        expect(domClass.contains(activity.domNode, colorMap.Other)).to.be.ok;
+      });
+
     });
 
   });
