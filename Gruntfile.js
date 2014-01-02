@@ -34,6 +34,13 @@ module.exports = function(grunt) {
           config: 'test/intern_config',
         }
       }
+    },
+
+    karma: {
+      test: {
+        configFile: 'test/karma/karma.conf.js',
+        autoWatch: true
+      }
     }
 
   });
