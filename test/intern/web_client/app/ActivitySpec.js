@@ -2,12 +2,14 @@ define([
   'intern!bdd',
   'intern/chai!expect',
   'app/Activity',
-  'dojo/dom-construct'
+  'dojo/dom-construct',
+  'dojo/dom-class'
 ], function(
   b,
   expect,
   Activity,
-  domConstruct
+  domConstruct,
+  domClass
 ) {
   'use strict';
 
@@ -55,6 +57,37 @@ define([
       b.it('should render total distance', function() {
         expect(activity.domNode.innerText).to.have.string(data.total_distance);
       });
+
+    });
+
+    b.describe('color coded activity type', function() {
+      var colorMap = {
+        'Running': 'blue',
+        'Cycling': 'green',
+        'Mountain Biking': 'purple',
+        'Walking': 'terques',
+        'Hiking': 'blue',
+        'Downhill Skiing': 'green',
+        'Cross-Country Skiing': 'purple',
+        'Snowboarding': 'terques',
+        'Skating': 'blue',
+        'Swimming': 'green',
+        'Wheelchair': 'purple',
+        'Rowing': 'terques',
+        'Elliptical': 'blue',
+        'Other': 'green'
+      };
+
+      var type;
+
+      for(type in colorMap) {
+        b.it('should be '+colorMap[type]+' for '+type, function() {
+          data.type = type;
+          activity = new Activity(data, ele);
+          activity.startup();
+          expect(domClass.contains(activity.domNode, colorMap[type])).to.be.ok;
+        });
+      }
 
     });
 

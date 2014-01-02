@@ -10,12 +10,30 @@ define([
   template
 ) {
 
+  var COLOR_MAP = {
+    'Running': 'blue',
+    'Cycling': 'green',
+    'Mountain Biking': 'purple',
+    'Walking': 'terques',
+    'Hiking': 'blue',
+    'Downhill Skiing': 'green',
+    'Cross-Country Skiing': 'purple',
+    'Snowboarding': 'terques',
+    'Skating': 'blue',
+    'Swimming': 'green',
+    'Wheelchair': 'purple',
+    'Rowing': 'terques',
+    'Elliptical': 'blue',
+    'Other': 'green'
+  };
+
   return declare([
     WidgetBase,
     TemplatedMixin
   ], {
     templateString: template,
-    startup: function() {
+    postMixInProperties: function() {
+      this.type_color = COLOR_MAP[this.type] || COLOR_MAP['Other'];
       this.inherited(arguments);
     }
   });
