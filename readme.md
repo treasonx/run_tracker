@@ -27,6 +27,10 @@ I am use to writing a lot of unit tests. Over the last year I have made unit tes
 
 That being said I see serious power when it comes to integration tests when using the intern. Since it works closely with selenium and sauce labs, running cross browser integration tests should be a breeze! You can drive the app like a user would and make assertions about how the app will react!  
 
+Running the specs: 
+
+`grunt connect:test`
+
 
 ## Karma
 
@@ -39,6 +43,7 @@ The Good:
 * File watcher
 * Easy to use Debug Page
 * Support for PhantomJS
+* CLI interface
 
 The Bad:
 
@@ -50,6 +55,9 @@ I have been using Karam for well over a year. I am partial to Karma because I am
 
 Integration testing with Karma sucks! There is no built in selenium support so you cannot drive your application like a user would. You are forced to use JS apis to drive the app, and although this is close, it isnt a replacement for real user interactions.
 
+Running the specs" 
+
+`grunt karma:test`
 
 ### But PhantomJS isnt a real browser?!
 
