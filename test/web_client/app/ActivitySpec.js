@@ -11,7 +11,7 @@ define([
 
   b.describe('Activity', function() {
     b.it('should be sane', function() {
-      expect(Activity).to.be.true();
+      expect(Activity).to.be.ok;
     });
   });
 
