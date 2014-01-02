@@ -3,6 +3,13 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     connect: {
+      app: {
+        options: {
+          port: 8080,
+          keepalive: true,
+          base: 'web_client/'
+        }
+      },
       test: {
         options: {
           port: 8080,
@@ -14,8 +21,17 @@ module.exports = function(grunt) {
               grunt.log.write('visit http://localhost:8080/node_modules/intern/client.html?config=test/intern_config.js');
             }
           },
-          keepalive: true,
-          livereload: true,
+          keepalive: true
+        }
+      }
+    },
+
+
+    intern: {
+      app: {
+        options: {
+          runType: 'runner',
+          config: 'test/intern_config',
         }
       }
     }
@@ -23,5 +39,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('intern');
 
 };
