@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>RunKeeper Card</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+    <script>
+      var dojoConfig = {
+        async: true,
+        packages: [{
+          name: 'app',
+          location: '/app'
+        }]
+      };
+
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.9.2/dojo/dojo.js"></script>
+    <script src="/app/main.js"></script>
+
+
+
+</head>
+
+  <body>
+    <div id="container">
+      <section id="main-content">
+        <section class="wrapper">
+          <div class="row">
+            <div class="col-lg-6">
+              <section class="panel" id="summaryContainer" data-dojo-type="app/summary">
+              </section>
+
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+
+
+
+  </body>
+</html>
