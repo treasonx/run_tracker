@@ -16,9 +16,9 @@ module.exports = function(grunt) {
           open: {
             //assumes OS X
             appName: 'open',
-            target: 'http://localhost:8080/node_modules/intern/client.html?config=test/intern_config.js',
+            target: 'http://localhost:8080/node_modules/intern/client.html?config=test/intern/intern_config.js',
             callback: function() {
-              grunt.log.write('visit http://localhost:8080/node_modules/intern/client.html?config=test/intern_config.js');
+              grunt.log.write('visit http://localhost:8080/node_modules/intern/client.html?config=test/intern/intern_config.js');
             }
           },
           keepalive: true
@@ -40,5 +40,6 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('intern');
+  grunt.loadNpmTasks('grunt-karma');
 
 };
