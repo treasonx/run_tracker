@@ -13,7 +13,11 @@ define([
 ) {
   'use strict';
 
-  b.describe('activity', function() {
+  var describe = b.describe;
+  var beforeEach = b.beforeEach;
+  var it = b.it;
+
+  describe('activity', function() {
 
     var data = {
       start_time: 'expected time',
@@ -24,7 +28,7 @@ define([
     var ele = null;
     var activity = null;
 
-    b.beforeEach(function() {
+    beforeEach(function() {
       if(activity) {
         activity.destroy();
       }
@@ -36,31 +40,31 @@ define([
     });
 
 
-    b.it('should be sane', function() {
+    it('should be sane', function() {
       expect(Activity).to.be.ok;
     });
 
-    b.describe('static rendering', function() {
-      b.beforeEach(function() {
+    describe('static rendering', function() {
+      beforeEach(function() {
         activity = new Activity(data, ele);
         activity.startup();
       });
 
-      b.it('should render start time', function() {
+      it('should render start time', function() {
         expect(activity.domNode.innerText).to.have.string(data.start_time);
       });
 
-      b.it('should render duration', function() {
+      it('should render duration', function() {
         expect(activity.domNode.innerText).to.have.string(data.duration);
       });
 
-      b.it('should render total distance', function() {
+      it('should render total distance', function() {
         expect(activity.domNode.innerText).to.have.string(data.total_distance);
       });
 
     });
 
-    b.describe('color coded activity type', function() {
+    describe('color coded activity type', function() {
       var colorMap = {
         'Running': 'blue',
         'Cycling': 'green',
@@ -81,7 +85,7 @@ define([
       var type;
 
       for(type in colorMap) {
-        b.it('should be '+colorMap[type]+' for '+type, function() {
+        it('should be '+colorMap[type]+' for '+type, function() {
           data.type = type;
           activity = new Activity(data, ele);
           activity.startup();
@@ -89,7 +93,7 @@ define([
         });
       }
 
-      b.it('should render unknown color as other', function() {
+      it('should render unknown color as other', function() {
         data.type = 'blahpoothingers';
         activity = new Activity(data, ele);
         activity.startup();
