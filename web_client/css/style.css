@@ -3134,10 +3134,10 @@ table.sliders tr td {
 
 
 .ui-widget-content {
-    background: #f0f2f7 !important;
-    border: none !important;
-    border-radius: 15px !important;
-    -webkit-border-radius: 15px !important;
+    /*background: #f0f2f7 !important;*/
+    /*border: none !important;*/
+    /*border-radius: 15px !important;*/
+    /*-webkit-border-radius: 15px !important;*/
 }
 
 .ui-slider-horizontal {
@@ -3149,10 +3149,10 @@ table.sliders tr td {
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-    background: #fff !important;
-    border: 3px solid #22bacf !important;
-    border-radius: 50% !important;
-    -webkit-border-radius: 50% !important;
+    /*background: #fff !important;*/
+    /*border: 3px solid #22bacf !important;*/
+    /*border-radius: 50% !important;*/
+    /*-webkit-border-radius: 50% !important;*/
 }
 
 .ui-slider-vertical {

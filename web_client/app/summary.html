@@ -1,27 +1,37 @@
 <section class="panel">
-  <div class="twt-feed blue-bg">
-    <h1>${name}</h1>
-    <p>${athlete_type}</p>
-    <a href="${profile}">
-      <img alt="profile" src="${normal_picture}">
-    </a>
-  </div> 
-  <div class="weather-category twt-category">
-    <ul>
-      <li class="active">
-          <h5 data-dojo-attach-point="calorieEle">320</h5>
-          Calories
-      </li>
-      <li>
-          <h5 data-dojo-attach-point="distanceEle">1245</h5>
-          Miles
-      </li>
-      <li>
-          <h5 data-dojo-attach-point="durationEle">24657</h5>
-          Duration
-      </li>
-    </ul>
-  </div>
+	<div class="flip-container" onclick="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front">
+				<div class="twt-feed blue-bg">
+					<h1>${name}</h1>
+					<p>${athlete_type}</p>
+					<a href="${profile}">
+						<img alt="profile" src="${normal_picture}">
+					</a>
+				</div> 
+				<div class="weather-category twt-category">
+					<ul>
+						<li class="active">
+								<h5 data-dojo-attach-point="calorieEle">320</h5>
+								Calories
+						</li>
+						<li>
+								<h5 data-dojo-attach-point="distanceEle">1245</h5>
+								Miles
+						</li>
+						<li>
+								<h5 data-dojo-attach-point="durationEle">24657</h5>
+								Duration
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="back">
+				<div style="height:300px;width:993px;backgrounf:white;">
+				</div>
+			</div>
+		</div>
+	</div>
   <div class="panel-body profile-activity" data-dojo-attach-point="activityListEle">
   </div>
 </section>

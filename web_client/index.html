@@ -15,21 +15,28 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
     <script>
       var dojoConfig = {
         async: true,
         packages: [{
           name: 'app',
           location: '/app'
-        }]
+				},{
+					name: 'dgrid',
+					location: '/libs/dgrid'
+				},{
+					name: 'xstyle',
+					location: '/libs/xstyle'
+				},{
+					name: 'put-selector',
+					location: '/libs/put-selector'
+				}]
       };
 
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/dojo/1.9.2/dojo/dojo.js"></script>
     <script src="/app/main.js"></script>
-
-
-
 </head>
 
   <body>
@@ -37,7 +44,7 @@
       <section id="main-content">
         <section class="wrapper">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-10">
               <section class="panel" id="summaryContainer" data-dojo-type="app/summary">
               </section>
 

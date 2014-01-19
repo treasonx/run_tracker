@@ -1,0 +1,62 @@
+.dgrid {
+	border: none !important;
+}
+.dgrid-scroller {
+	width: auto !important;
+}
+.dgrid .activity-desk .panel{
+	width: 98%;
+}
+
+.activity-row {
+	padding: 0 20px;
+}
+
+.dgrid.panel-body {
+	padding: 0;
+}
+
+.wrapper {
+	margin: auto;
+}
+
+.flip-container {
+	-webkit-perspective: 1000;
+}
+
+/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		-webkit-transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 993px;
+	height: 300px;
+}
+
+/* flip speed goes here */
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	-webkit-backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+	-webkit-transform: rotateY(180deg);
+	background: silver;
+}
